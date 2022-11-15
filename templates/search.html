@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How much gas are you spending on Ethereum mainnet?">
+    <meta name="author" content="Cyril Mawutor Agbenyenu">
+
+    <title>gaspend - ethereum gas tracker</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
+  </head>
+  <body class="">
+
+    <main class="search-results w-100 m-auto">
+      <div class="">
+
+        <small class="text-muted">Wallet: {{ data.ethereum.wallet }}</small>
+        <br>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Gas Spent</h5>
+                <h1 class="card-text">${{ data.ethereum.total_gas_spent_usd }}</h1>
+                <p class="card-text">Ξ{{ data.ethereum.total_gas_spent }}</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Avg. Gas/Tx</h5>
+                <h1 class="card-text">${{ data.ethereum.avg_gas_per_tx_usd }}</h1>
+                <p class="card-text">Ξ{{ data.ethereum.avg_gas_per_tx }}</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <a href="/"><button class="btn btn-primary shadow-none">Go back</button></a>
+    </main>
+
+
+  </body>
+</html>

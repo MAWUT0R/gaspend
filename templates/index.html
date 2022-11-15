@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How much gas are you spending on Ethereum mainnet?">
+    <meta name="author" content="Cyril Mawutor Agbenyenu">
+
+    <title>gaspend - ethereum gas tracker</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+  </head>
+  <body class="text-center">
+
+    <main class="form-signin w-100 m-auto">
+      <form method="GET" action="/search">
+        <!-- <img class="mb-4" src="{{ url_for('static', filename='gaspend_logo.png')}}" alt="" width="100" height="100"> -->
+        <h1 class="h3 mb-3 fw-normal logo">gaspend</h1>
+        <p>How much gas are you spending on Ethereum mainnet?</p>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control shadow-none" placeholder="Ethereum address eg 0x... or ENS" aria-label="Ethereum address" name="param" required data-error="Please enter your Ethereum address">
+          <button class="btn btn-primary shadow-none" type="submit">Find Out</button>
+        </div>
+
+        <p class="mt-5 mb-3 text-muted footer-text">&copy; 2022 | Powered by <a href="https://docs.rss3.io/docs" target="_blank">RSS3</a></p>
+      </form>
+    </main>
+
+
+  </body>
+</html>
